@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public GameObject windowBackground;
     public GameObject gameOverScreen;
     public GameObject howToPlayScreen;
+    public GameObject settingScreen;
     public TextMeshProUGUI levelText;
     public AudioSource goalSound;
     public AudioSource swingSound;
@@ -77,9 +78,16 @@ public class LevelManager : MonoBehaviour
         howToPlayScreen.SetActive(true);
     }
 
+    public void Settings()
+    {
+        windowBackground.SetActive(true);
+        settingScreen.SetActive(true);
+    }
+
      public void CloseMessage()
     {
         howToPlayScreen.SetActive(false);
+        settingScreen.SetActive(false);
         windowBackground.SetActive(false);
     }
 

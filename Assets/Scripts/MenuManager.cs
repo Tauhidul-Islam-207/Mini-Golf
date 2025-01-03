@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     private Color defaultWhite = new Color(1.0f, 1.0f, 1.0f, 0.1176f);
     public GameObject windowBackground;
     public GameObject ratingPanel;
+    public GameObject settingPanel;
     
     // Start is called before the first frame update
     void Start()
@@ -43,9 +44,16 @@ public class MenuManager : MonoBehaviour
         ratingPanel.SetActive(true);
     }
 
+    public void Settings()
+    {
+        windowBackground.SetActive(true);
+        settingPanel.SetActive(true);
+    }
+
     public void CloseMessage()
     {
         ratingPanel.SetActive(false);
+        settingPanel.SetActive(false);
         windowBackground.SetActive(false);
     }
 
